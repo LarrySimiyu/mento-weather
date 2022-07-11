@@ -12,7 +12,7 @@ const NavBar = () => {
       </div>
       <div className="linkContainer">
         <Link
-          to="/sevenWonders"
+          to="/hotAndNot"
           className="link"
           style={{ textDecoration: "none" }}
         >

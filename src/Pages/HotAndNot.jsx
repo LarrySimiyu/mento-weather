@@ -5,20 +5,12 @@ import { WeatherCard } from "../Components/WeatherCard";
 
 import axios from "axios";
 
-const SevenWonders = () => {
+const HotAndNot = () => {
   const [weatherData, setWeatherData] = useState();
-  const [popularZip, setPopularZip] = useState();
 
   const zipCodes = [
     85001, 88901, 85641, 92501, 78015, 33101, 77001, 93650, 75001, 32789,
   ];
-
-  const generateCity = () => {
-    const zipCode = zipCodes[(zipCodes.length * Math.random()) | 0];
-    fetchZipCodeWeather(zipCode).then((response) => {
-      setWeatherData(response);
-    });
-  };
 
   const fetchZipCodeWeather = (zip) => {
     return axios
@@ -34,7 +26,6 @@ const SevenWonders = () => {
 
   useEffect(() => {
     const zipCode = zipCodes[(zipCodes.length * Math.random()) | 0];
-    console.log(zipCode);
 
     fetchZipCodeWeather(zipCode).then((response) => {
       setWeatherData(response);
@@ -42,7 +33,12 @@ const SevenWonders = () => {
   }, []);
 
   if (weatherData === undefined) {
-    return <div>not loaded yet </div>;
+    return (
+      <div className="pageContainer">
+        <img src="sunny.png" alt="SUN" className="sunLoading" />
+        <div className="loadingMessage">Loading Weather</div>
+      </div>
+    );
   } else {
     return (
       <div className="pageContainer">
@@ -61,4 +57,4 @@ const SevenWonders = () => {
   }
 };
 
-export { SevenWonders };
+export { HotAndNot };
