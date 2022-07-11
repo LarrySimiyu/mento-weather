@@ -7,5 +7,5 @@
 Back End server from https://github.com/LarrySimiyu/mento-BE must be running for front end to work.
 
 
-#VIDEO WALK THROUGH
+# VIDEO WALK THROUGH
 https://www.loom.com/share/c7dbdae3ea9c4582af87389d05589ed7
