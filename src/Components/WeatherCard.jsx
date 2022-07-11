@@ -5,14 +5,12 @@ const WeatherCard = ({ temp, max, min, icon, sunrise, sunset, city }) => {
   const getSunrise = () => {
     var date = new Date(sunrise * 1000);
     var timestr = date.toLocaleTimeString();
-    console.log(timestr, "timestring");
     return <div>{timestr}</div>;
   };
 
   const getSunset = () => {
     var date = new Date(sunset * 1000);
     var timestr = date.toLocaleTimeString();
-    console.log(timestr, "timestring");
     return <div>{timestr}</div>;
   };
 
@@ -22,7 +20,7 @@ const WeatherCard = ({ temp, max, min, icon, sunrise, sunset, city }) => {
       <div className="tempData">
         <div className="tempContainer">
           {" "}
-          {temp} <span>&#176;</span>
+          {Math.ceil(temp)} <span>&#176;</span>
         </div>
 
         <div className="weatherIcon">
@@ -36,11 +34,11 @@ const WeatherCard = ({ temp, max, min, icon, sunrise, sunset, city }) => {
       <div className="detailsContainer">
         <div className="minMaxContainer">
           <div className="min">
-            Min: {min} <span>&#176;</span>
+            Min: {Math.ceil(min)} <span>&#176;</span>
           </div>
 
           <div className="max">
-            Max: {max} <span>&#176;</span>
+            Max: {Math.ceil(max)} <span>&#176;</span>
           </div>
         </div>
         <div className="sunriseSunsetContainer">

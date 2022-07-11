@@ -1,9 +1,9 @@
 export const weatherImages = new Map([
   ["clear sky", "sunny.png"],
   ["overcast clouds", "cloudy.png"],
-  ["few clouds", "cloudy.png"],
-  ["scattered clouds", "cloudy.png"],
-  ["broken clouds", "cloudy.png"],
+  ["few clouds", "sunnyWithClouds.png"],
+  ["scattered clouds", "sun-clouds-wind.png"],
+  ["broken clouds", "sunnyWithClouds.png"],
   ["light intensity drizzle", "drizzle.png"],
   ["drizzle", "drizzle.png"],
   ["high intensity drizzle", "drizzle.png"],
@@ -21,4 +21,5 @@ export const weatherImages = new Map([
   ["shower rain", "raining.png"],
   ["heavy intensity shower rain", "raining.png"],
   ["ragged shower rain", "raining.png"],
+  ["mist", "mist.png"],
 ]);

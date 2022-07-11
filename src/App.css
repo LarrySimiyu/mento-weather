@@ -177,3 +177,11 @@ img.sunset {
   border: 1px solid black;
   width: 50%;
 }
+
+.loadingMessage {
+  font-weight: bold;
+}
+
+.sunLoading {
+  width: 10%;
+}

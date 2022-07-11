@@ -34,14 +34,11 @@ const SevenWonders = () => {
 
   useEffect(() => {
     const zipCode = zipCodes[(zipCodes.length * Math.random()) | 0];
+    console.log(zipCode);
 
     fetchZipCodeWeather(zipCode).then((response) => {
-      console.log(response);
       setWeatherData(response);
     });
-
-    console.log("MOUNTED");
-    return () => console.log("UNMOUNTED");
   }, []);
 
   if (weatherData === undefined) {

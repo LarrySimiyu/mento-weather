@@ -14,7 +14,6 @@ const Landing = () => {
   };
 
   const handleZipCodeInput = (event) => {
-    console.log(event.target.value);
     setZip(event.target.value);
   };
 
@@ -33,25 +32,27 @@ const Landing = () => {
   const handleZipSubmission = (event) => {
     event.preventDefault();
     fetchZipCodeWeather().then((response) => {
-      console.log(response, `weather at given zipcode ${zip}`);
       setWeatherData(response);
     });
+
+    setZip("");
   };
 
   useEffect(() => {
     if (Object.keys(weatherData).length === 0) {
       fetchLocalWeather().then((response) => {
-        console.log(response);
         setWeatherData(response);
       });
-
-      console.log("MOUNTED");
-      return () => console.log("UNMOUNTED");
     }
   }, [weatherData]);
 
   if (weatherData.main === undefined) {
-    return <div>not loaded yet </div>;
+    return (
+      <div className="pageContainer">
+        <img src="sunny.png" alt="SUN" className="sunLoading" />
+        <div className="loadingMessage">Loading Weather</div>
+      </div>
+    );
   } else {
     return (
       <div className="pageContainer">
