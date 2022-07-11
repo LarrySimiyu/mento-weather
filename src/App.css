@@ -36,3 +36,144 @@
     transform: rotate(360deg);
   }
 }
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.parentContainer {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
+.navBarContainer {
+  padding: 10px 20px;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  border-bottom: 2px solid black;
+}
+
+.linkContainer {
+  display: flex;
+  align-items: center;
+}
+
+.link {
+  font-size: 20px;
+  font-weight: 500;
+  color: black;
+}
+
+.pageContainer {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.cardContainer {
+  border: 3px solid black;
+  width: 50%;
+  height: 70%;
+}
+
+.cityName {
+  height: 15%;
+  font-size: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-bottom: 3px solid black;
+}
+
+.tempData {
+  height: 50%;
+  display: flex;
+}
+
+.tempContainer {
+  width: 50%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 100px;
+}
+
+.weatherIcon {
+  width: 50%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+img.tempImage {
+  height: 100%;
+}
+.detailsContainer {
+  border-top: 3px solid black;
+  height: 40%;
+  display: flex;
+}
+
+.minMaxContainer {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 50px;
+  justify-content: space-evenly;
+  height: 85%;
+}
+
+.sunriseSunsetContainer {
+  border-left: 3px solid black;
+  width: 50%;
+  height: 85%;
+}
+
+img.sunrise {
+  width: 20%;
+}
+
+img.sunset {
+  width: 20%;
+}
+
+.sunriseContainer {
+  display: flex;
+  align-items: center;
+  height: 50%;
+  justify-content: center;
+}
+
+.sunsetContainer {
+  display: flex;
+  align-items: center;
+  height: 48.5%;
+  justify-content: center;
+}
+
+.inputContainer {
+  display: flex;
+  align-items: bottom;
+  margin-top: 50px;
+  margin-bottom: 20px;
+  border-bottom: 2px solid black;
+  width: 30%;
+  justify-content: space-between;
+  padding-left: 10px;
+  padding-bottom: 5px;
+  border-radius: 5;
+}
+
+.generateButtonContainer {
+  border: 1px solid black;
+  width: 50%;
+}
