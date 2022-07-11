@@ -4,7 +4,7 @@
 3. Run `npm start` to start the application locally.
 
 # NOTE
-Back End server from https://github.com/LarrySimiyu/mento-BE/blob/main/README.md must be running for front end to work.
+Back End server from https://github.com/LarrySimiyu/mento-BE must be running for front end to work.
 
 
 #VIDEO WALK THROUGH
